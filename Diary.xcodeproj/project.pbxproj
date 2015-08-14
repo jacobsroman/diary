@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0448DBFA1B7DE46F000A5579 /* NoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448DBF91B7DE46F000A5579 /* NoteCell.m */; };
+		0448DBFD1B7DE645000A5579 /* NSString+Heigh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448DBFC1B7DE645000A5579 /* NSString+Heigh.m */; };
+		0448DC071B7DEED7000A5579 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448DC061B7DEED7000A5579 /* Note.m */; };
 		04503A4E1B7A1305000398E9 /* NotesTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04503A4D1B7A1305000398E9 /* NotesTableController.m */; };
 		04A826021B75FE2000F7C68C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A826011B75FE2000F7C68C /* main.m */; };
 		04A826051B75FE2000F7C68C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A826041B75FE2000F7C68C /* AppDelegate.m */; };
@@ -30,6 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0448DBF81B7DE46F000A5579 /* NoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteCell.h; sourceTree = "<group>"; };
+		0448DBF91B7DE46F000A5579 /* NoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteCell.m; sourceTree = "<group>"; };
+		0448DBFB1B7DE645000A5579 /* NSString+Heigh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Heigh.h"; sourceTree = "<group>"; };
+		0448DBFC1B7DE645000A5579 /* NSString+Heigh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Heigh.m"; sourceTree = "<group>"; };
+		0448DC011B7DEC67000A5579 /* Diary 1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Diary 1.1.xcdatamodel"; sourceTree = "<group>"; };
+		0448DC051B7DEED7000A5579 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		0448DC061B7DEED7000A5579 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		04503A4C1B7A1305000398E9 /* NotesTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesTableController.h; sourceTree = "<group>"; };
 		04503A4D1B7A1305000398E9 /* NotesTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTableController.m; sourceTree = "<group>"; };
 		04A825FC1B75FE2000F7C68C /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,8 +83,12 @@
 			children = (
 				04503A4C1B7A1305000398E9 /* NotesTableController.h */,
 				04503A4D1B7A1305000398E9 /* NotesTableController.m */,
+				0448DBF81B7DE46F000A5579 /* NoteCell.h */,
+				0448DBF91B7DE46F000A5579 /* NoteCell.m */,
 				04A8262B1B761EF000F7C68C /* NoteDesciriptionController.h */,
 				04A8262C1B761EF000F7C68C /* NoteDesciriptionController.m */,
+				0448DBFB1B7DE645000A5579 /* NSString+Heigh.h */,
+				0448DBFC1B7DE645000A5579 /* NSString+Heigh.m */,
 			);
 			name = Notes;
 			sourceTree = "<group>";
@@ -104,6 +118,8 @@
 				04A826041B75FE2000F7C68C /* AppDelegate.m */,
 				04A826281B76158500F7C68C /* CoreDataManager.h */,
 				04A826291B76158500F7C68C /* CoreDataManager.m */,
+				0448DC051B7DEED7000A5579 /* Note.h */,
+				0448DC061B7DEED7000A5579 /* Note.m */,
 				04503A4F1B7A1312000398E9 /* Notes */,
 				04A8260C1B75FE2000F7C68C /* Main.storyboard */,
 				04A8260F1B75FE2000F7C68C /* Images.xcassets */,
@@ -240,8 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0448DC071B7DEED7000A5579 /* Note.m in Sources */,
 				04A826081B75FE2000F7C68C /* Diary.xcdatamodeld in Sources */,
+				0448DBFA1B7DE46F000A5579 /* NoteCell.m in Sources */,
 				04A826051B75FE2000F7C68C /* AppDelegate.m in Sources */,
+				0448DBFD1B7DE645000A5579 /* NSString+Heigh.m in Sources */,
 				04A8262A1B76158500F7C68C /* CoreDataManager.m in Sources */,
 				04A826021B75FE2000F7C68C /* main.m in Sources */,
 				04503A4E1B7A1305000398E9 /* NotesTableController.m in Sources */,
@@ -457,9 +476,10 @@
 		04A826061B75FE2000F7C68C /* Diary.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				0448DC011B7DEC67000A5579 /* Diary 1.1.xcdatamodel */,
 				04A826071B75FE2000F7C68C /* Diary.xcdatamodel */,
 			);
-			currentVersion = 04A826071B75FE2000F7C68C /* Diary.xcdatamodel */;
+			currentVersion = 0448DC011B7DEC67000A5579 /* Diary 1.1.xcdatamodel */;
 			path = Diary.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -71,25 +71,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tMp-Cq-TXM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tMp-Cq-TXM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" textLabel="Xc0-lp-FHA" style="IBUITableViewCellStyleDefault" id="oC2-bb-jyv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="80" id="oC2-bb-jyv" customClass="NoteCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oC2-bb-jyv" id="VTF-tu-X4H">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xc0-lp-FHA">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2r-pc-ABr">
+                                                    <rect key="frame" x="8" y="8" width="551" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="htp-CA-naE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dq-0M-doI">
+                                                    <rect key="frame" x="8" y="37" width="551" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4dq-0M-doI" firstAttribute="leading" secondItem="VTF-tu-X4H" secondAttribute="leading" constant="8" id="IxM-Go-DkB"/>
+                                                <constraint firstAttribute="trailing" secondItem="T2r-pc-ABr" secondAttribute="trailing" constant="8" id="ZTg-l6-EQS"/>
+                                                <constraint firstItem="T2r-pc-ABr" firstAttribute="top" secondItem="VTF-tu-X4H" secondAttribute="top" constant="8" id="bd3-b3-g6q"/>
+                                                <constraint firstItem="T2r-pc-ABr" firstAttribute="leading" secondItem="VTF-tu-X4H" secondAttribute="leading" constant="8" id="fdV-EW-IAD"/>
+                                                <constraint firstAttribute="bottom" secondItem="4dq-0M-doI" secondAttribute="bottom" constant="8" id="qvJ-K4-0Pd"/>
+                                                <constraint firstItem="4dq-0M-doI" firstAttribute="top" secondItem="T2r-pc-ABr" secondAttribute="bottom" constant="8" id="umn-gC-YvI"/>
+                                                <constraint firstAttribute="trailing" secondItem="4dq-0M-doI" secondAttribute="trailing" constant="8" id="vfw-yH-1Xf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="descriptionLabel" destination="4dq-0M-doI" id="U1T-Ee-Vr7"/>
+                                            <outlet property="titleLabel" destination="T2r-pc-ABr" id="jbv-R4-J6U"/>
                                             <segue destination="W7N-qM-UfH" kind="show" identifier="cellSegue" id="wNx-Gi-akE"/>
                                         </connections>
                                     </tableViewCell>

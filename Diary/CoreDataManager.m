@@ -23,11 +23,12 @@
 - (void)addNewNoteWithTitle:(NSString*)title
                        text:(NSString*)text
 {
-    NSManagedObject* theNote = [NSEntityDescription insertNewObjectForEntityForName:lNotesEntity inManagedObjectContext:[self managedObjectContext]];
+    Note* theNote = [NSEntityDescription insertNewObjectForEntityForName:lNotesEntity inManagedObjectContext:[self managedObjectContext]];
     
-    [theNote setValue:title forKey:@"title"];
-    [theNote setValue:text forKey:@"text"];
-    [theNote setValue:[NSDate date] forKey:@"timeStamp"];
+    theNote.title = title;
+    theNote.noteDescription = text;
+    theNote.timeStamp = [NSDate date];
+    
     [self saveContext];
 }
 

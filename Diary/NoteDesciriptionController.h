@@ -12,6 +12,6 @@
 @interface NoteDesciriptionController : UIViewController
 
 @property BOOL isNew;
-@property (strong, nonatomic) NSManagedObject* note;
+@property (strong, nonatomic) Note* note;
 
 @end

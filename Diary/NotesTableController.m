@@ -8,6 +8,8 @@
 
 #import "NotesTableController.h"
 #import "NoteDesciriptionController.h"
+#import "NoteCell.h"
+#import "NSString+Heigh.h"
 #import "AppDelegate.h"
 
 #define cellSegue @"cellSegue"
@@ -16,11 +18,14 @@
 
 @interface NotesTableController ()
 <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation NotesTableController
+
+@synthesize tableView = _tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,18 +52,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject* aNote = [[[[APP dataManager]notesFetchController]fetchedObjects]objectAtIndex:indexPath.row];
-    UITableViewCell* noteCell = [self.tableView dequeueReusableCellWithIdentifier:@"NoteCell" forIndexPath:indexPath];
-//    [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"NoteCell"];
-//    [self.tableView cellForRowAtIndexPath:indexPath];
-    UILabel* label = noteCell.textLabel;
-    label.text = [NSString stringWithFormat:@"%@", [aNote valueForKey:@"title"]];
-//    noteCell.textLabel.text = [NSString stringWithFormat:@"%@", [aNote valueForKey:@"title"]];
+    Note* aNote = [[[[APP dataManager]notesFetchController]fetchedObjects]objectAtIndex:indexPath.row];
+    NoteCell* noteCell = [self.tableView dequeueReusableCellWithIdentifier:@"NoteCell" forIndexPath:indexPath];
+    [noteCell configureNoteCellWithNote:aNote];
     return noteCell;
 }
 
 #pragma mark - UITableViewDelegate
 // Swipe to delete.
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Note* aNote = [[[[APP dataManager]notesFetchController]fetchedObjects]objectAtIndex:indexPath.row];
+    NSString* description = aNote.noteDescription;
+    return 46 + [description heightForString];
+}
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -105,6 +113,8 @@
     [self.tableView endUpdates];
     [self.tableView reloadData];
 }
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
