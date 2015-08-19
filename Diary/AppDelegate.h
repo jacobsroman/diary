@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataManager.h"
+#import "TaskManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) CoreDataManager* dataManager;
+@property (strong, nonatomic) TaskManager* taskManager;
 
 @property (strong, nonatomic) UIWindow *window;
 

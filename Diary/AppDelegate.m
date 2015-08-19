@@ -15,6 +15,8 @@
 @implementation AppDelegate
 
 @synthesize dataManager = _dataManager;
+@synthesize taskManager = _taskManager;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -54,5 +56,12 @@
     return _dataManager;
 }
 
+- (TaskManager*)taskManager
+{
+    if (!_taskManager) {
+        _taskManager = [[TaskManager alloc]init];
+    }
+    return _taskManager;
+}
 
 @end

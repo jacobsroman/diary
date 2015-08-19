@@ -20,6 +20,9 @@
 		04A8261F1B75FE2000F7C68C /* DiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8261E1B75FE2000F7C68C /* DiaryTests.m */; };
 		04A8262A1B76158500F7C68C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A826291B76158500F7C68C /* CoreDataManager.m */; };
 		04A8262D1B761EF000F7C68C /* NoteDesciriptionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8262C1B761EF000F7C68C /* NoteDesciriptionController.m */; };
+		04B2D09C1B8471CF00E3261E /* TasksController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B2D09B1B8471CF00E3261E /* TasksController.m */; };
+		04B2D0A01B84734C00E3261E /* TaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B2D09F1B84734C00E3261E /* TaskManager.m */; };
+		04B2D0A31B8477C300E3261E /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B2D0A21B8477C300E3261E /* TaskCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,16 @@
 		04A826291B76158500F7C68C /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		04A8262B1B761EF000F7C68C /* NoteDesciriptionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteDesciriptionController.h; sourceTree = "<group>"; };
 		04A8262C1B761EF000F7C68C /* NoteDesciriptionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteDesciriptionController.m; sourceTree = "<group>"; };
+		04B2D09A1B8471CF00E3261E /* TasksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksController.h; sourceTree = "<group>"; };
+		04B2D09B1B8471CF00E3261E /* TasksController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksController.m; sourceTree = "<group>"; };
+		04B2D09E1B84734C00E3261E /* TaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskManager.h; sourceTree = "<group>"; };
+		04B2D09F1B84734C00E3261E /* TaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskManager.m; sourceTree = "<group>"; };
+		04B2D0A11B8477C300E3261E /* TaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskCell.h; sourceTree = "<group>"; };
+		04B2D0A21B8477C300E3261E /* TaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskCell.m; sourceTree = "<group>"; };
+		04B2D0A41B84AA4800E3261E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		04B2D0A61B84AA4F00E3261E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		04B2D0A71B84AA4F00E3261E /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		04B2D0AA1B84AA7100E3261E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +109,10 @@
 		04A825F31B75FE2000F7C68C = {
 			isa = PBXGroup;
 			children = (
+				04B2D0AA1B84AA7100E3261E /* Foundation.framework */,
+				04B2D0A61B84AA4F00E3261E /* EventKit.framework */,
+				04B2D0A71B84AA4F00E3261E /* EventKitUI.framework */,
+				04B2D0A41B84AA4800E3261E /* CoreData.framework */,
 				04A825FE1B75FE2000F7C68C /* Diary */,
 				04A8261B1B75FE2000F7C68C /* DiaryTests */,
 				04A825FD1B75FE2000F7C68C /* Products */,
@@ -116,12 +133,15 @@
 			children = (
 				04A826031B75FE2000F7C68C /* AppDelegate.h */,
 				04A826041B75FE2000F7C68C /* AppDelegate.m */,
+				04A8260C1B75FE2000F7C68C /* Main.storyboard */,
 				04A826281B76158500F7C68C /* CoreDataManager.h */,
 				04A826291B76158500F7C68C /* CoreDataManager.m */,
+				04B2D09E1B84734C00E3261E /* TaskManager.h */,
+				04B2D09F1B84734C00E3261E /* TaskManager.m */,
 				0448DC051B7DEED7000A5579 /* Note.h */,
 				0448DC061B7DEED7000A5579 /* Note.m */,
+				04B2D09D1B8471D900E3261E /* Tasks */,
 				04503A4F1B7A1312000398E9 /* Notes */,
-				04A8260C1B75FE2000F7C68C /* Main.storyboard */,
 				04A8260F1B75FE2000F7C68C /* Images.xcassets */,
 				04A826111B75FE2000F7C68C /* LaunchScreen.xib */,
 				04A826061B75FE2000F7C68C /* Diary.xcdatamodeld */,
@@ -154,6 +174,17 @@
 				04A8261D1B75FE2000F7C68C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04B2D09D1B8471D900E3261E /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				04B2D09A1B8471CF00E3261E /* TasksController.h */,
+				04B2D09B1B8471CF00E3261E /* TasksController.m */,
+				04B2D0A11B8477C300E3261E /* TaskCell.h */,
+				04B2D0A21B8477C300E3261E /* TaskCell.m */,
+			);
+			name = Tasks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +290,10 @@
 				0448DC071B7DEED7000A5579 /* Note.m in Sources */,
 				04A826081B75FE2000F7C68C /* Diary.xcdatamodeld in Sources */,
 				0448DBFA1B7DE46F000A5579 /* NoteCell.m in Sources */,
+				04B2D0A31B8477C300E3261E /* TaskCell.m in Sources */,
+				04B2D0A01B84734C00E3261E /* TaskManager.m in Sources */,
 				04A826051B75FE2000F7C68C /* AppDelegate.m in Sources */,
+				04B2D09C1B8471CF00E3261E /* TasksController.m in Sources */,
 				0448DBFD1B7DE645000A5579 /* NSString+Heigh.m in Sources */,
 				04A8262A1B76158500F7C68C /* CoreDataManager.m in Sources */,
 				04A826021B75FE2000F7C68C /* main.m in Sources */,
